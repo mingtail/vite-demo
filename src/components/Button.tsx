@@ -8,8 +8,8 @@ interface ButtonProps {
 const XButton = defineComponent({
   props: ['type', 'text'],
   setup(props: ButtonProps, context) {
-    console.log(props)
-    console.log(context)
+    console.log('props', props)
+    console.log('context', context)
     return () => (
       <button class={`btn btn-${props.type}`}>
         {context.slots.default ? context.slots.default() : props.text}

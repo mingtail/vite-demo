@@ -12,7 +12,6 @@ const Gallery = defineComponent({
     const store = useStore()
     console.log('store', store)
     const { count, increaseCount } = useCount()
-    console.log('count', count)
     return () => (
       <div class='page page_gallery'>
         <Header title={state.key}></Header>
