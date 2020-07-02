@@ -1,0 +1,155 @@
+@import './var.scss';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+#app {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tab-wrap {
+  position: relative;
+  display: flex;
+  height: 40px;
+  line-height: 40px;
+  box-shadow: 0 0 5px $color_border_light;
+  & a {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: $color_text_regular;
+  }
+  .router-link-active {
+    color: $color_success;
+  }
+}
+
+.page {
+  flex: 1;
+  height: 100%;
+  color: $color_text_primary;
+  overflow-y: auto;
+}
+
+.page_header {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 0 44px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 16px;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0 0 5px $color_border_light;
+  user-select: none;
+  .icon-back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 44px;
+    height: 100%;
+    text-align: center;
+    &:active {
+      background: #f5f5f5;
+    }
+    & svg {
+      fill: $color_text_regular;
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+    }
+  }
+}
+
+.page_home {
+  text-align: center;
+}
+
+.page_gallery {
+  text-align: center;
+}
+
+.count-num {
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+}
+
+.btn-wrap {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0 10px;
+  height: 32px;
+  min-width: 65px;
+  font-size: 14px;
+  background: #ffffff;
+  border: 1px solid $color_border_base;
+  outline: none;
+  border-radius: 4px;
+  &:active {
+    background: #f5f5f5;
+  }
+  &.btn-primary {
+    color: #ffffff;
+    background: $color_primary;
+    border-color: $color_primary;
+  }
+  &.btn-info {
+    color: #ffffff;
+    background: $color_info;
+    border-color: $color_info;
+  }
+  &.btn-success {
+    color: #ffffff;
+    background: $color_success;
+    border-color: $color_success;
+  }
+  &.btn-warning {
+    color: #ffffff;
+    background: $color_warning;
+    border-color: $color_warning;
+  }
+  &.btn-error {
+    color: #ffffff;
+    background: $color_danger;
+    border-color: $color_danger;
+  }
+}
+
+.cover-wrap {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  & img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.user-panel {
+  padding: 20px;
+  text-align: center;
+}
+
+.loading-text {
+  margin-top: 50px;
+  font-size: 13px;
+  color: $color_text_secondary;
+  text-align: center;
+}
