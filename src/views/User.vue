@@ -24,7 +24,7 @@ export default defineComponent({
   setup() {
     const store = useStore()
     const userInfo = computed(() => store.state.userInfo)
-    store.dispatch('getUserInfo')
+    !store.state.userInfo.id && store.dispatch('getUserInfo')
     return {
       userInfo,
       inited: computed(() => store.state.userInfo.hasOwnProperty('name'))

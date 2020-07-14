@@ -14,19 +14,19 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { useCount, useLike } from '../api/useMixins'
+import { defineComponent } from 'vue';
+import { useCount, useLike } from '../api/useMixins';
 
 interface Props {
-  msg: string
+  msg: string;
 }
 
 const Sample = defineComponent({
   props: ['msg'],
   setup(props: Props) {
-    const { msg } = props
-    const { count, increaseCount, decreaseCount } = useCount(2)
-    const { isLike, toggleLike } = useLike()
+    const { msg } = props;
+    const { count, increaseCount, decreaseCount } = useCount(2);
+    const { isLike, toggleLike } = useLike();
     return {
       msg,
       count,
@@ -34,9 +34,9 @@ const Sample = defineComponent({
       decreaseCount,
       isLike,
       toggleLike,
-    }
+    };
   },
-})
+});
 
-export default Sample
+export default Sample;
 </script>
