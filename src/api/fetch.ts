@@ -3,12 +3,12 @@ interface Options {
   data?: any
 }
 
-export function fetch(options: Options): any {
+export function fetch(_options: Options): any {
   // const { url, data = {} } = options
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const rate = Math.random()
-      if (rate > 0.3) {
+      if (rate > 0.1) {
         const res = { code: 200 }
         resolve(res)
       } else {

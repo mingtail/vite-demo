@@ -18,8 +18,8 @@ body {
 .tab-wrap {
   position: relative;
   display: flex;
-  height: 40px;
-  line-height: 40px;
+  height: 50px;
+  line-height: 50px;
   box-shadow: 0 0 5px $color_border_light;
   & a {
     flex: 1;
@@ -144,6 +144,7 @@ body {
 
 .user-panel {
   padding: 20px;
+  height: 190px;
   text-align: center;
 }
 
@@ -152,4 +153,25 @@ body {
   font-size: 13px;
   color: $color_text_secondary;
   text-align: center;
+}
+
+.divider {
+  height: 10px;
+  background-color: #fff;
+}
+
+.btn-box {
+  padding: 10px;
+  text-align: center;
+}
+
+/********transition*********/
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }

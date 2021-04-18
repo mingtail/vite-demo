@@ -19,7 +19,7 @@ export function useCount(count: number = 0): UseCount {
   watchEffect(() => {
     console.log('count:', store.state.count)
   })
-  
+
   return {
     count: computed(() => store.state.count),
     increaseCount,

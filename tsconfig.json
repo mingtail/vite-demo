@@ -7,10 +7,11 @@
     "jsx": "preserve",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "sourceMap": true,
     "lib": ["esnext", "dom"],
-    "types": ["vite/client"],
-    "plugins": [{ "name": "@vuedx/typescript-plugin-vue" }]
+    "types": ["vite/client"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "exclude": ["node_modules", "dist"]

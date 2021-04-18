@@ -1,6 +1,6 @@
 # vite-demo
 
-Vite app, based with vue-next, vue-router-next, vuex, typescript.
+Vite app(v2.x), based with vue-next, vue-router-next, vuex, typescript.
 
 ## Project setup
 ```

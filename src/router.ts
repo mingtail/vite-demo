@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from './views/Home.vue'
+import Home from './views/Home'
 import Gallery from './views/Gallery'
-import User from './views/User.vue'
+import User from './views/User'
 
 export const router = createRouter({
   history: createWebHistory(),

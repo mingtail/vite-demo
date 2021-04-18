@@ -1,10 +1,3 @@
-<template>
-  <div class="page page_home">
-    <Header title="Home" />
-    <Case msg="This is case" />
-  </div>
-</template>
-<script lang="ts">
 import {
   defineComponent,
   onBeforeMount,
@@ -15,9 +8,10 @@ import {
   onUpdated,
   onErrorCaptured,
 } from 'vue'
-import Header from '../components/Header.vue'
-import Case from '../components/Case.vue'
-export default defineComponent({
+import Header from '../components/Header'
+import Case from '../components/Case'
+
+const Home = defineComponent({
   components: {
     Case,
     Header,
@@ -54,7 +48,13 @@ export default defineComponent({
     onErrorCaptured(() => {
       console.log('onErrorCaptured!')
     })
-    return {}
+    return () => (
+      <div class='page page_home'>
+        <Header title='Home' back={false} />
+        <Case msg='home demo' />
+      </div>
+    )
   },
 })
-</script>
+
+export default Home

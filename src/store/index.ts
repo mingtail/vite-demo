@@ -1,6 +1,6 @@
 import { createStore } from 'vuex'
 import { fetch } from '../api/fetch'
-import { StateModel, UserModel } from './model'
+import { StateModel, UserModel } from '../types/model'
 
 const state: StateModel = {
   count: 1,
